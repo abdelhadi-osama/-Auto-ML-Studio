@@ -44,24 +44,21 @@ The system automatically configures itself based on your problem type:
 ---
 
 
+## 📂 Project Structure & File Description
+
+The project is organized into modular Python scripts to ensure scalability and ease of maintenance.
+
+```text
 automl-studio/
 ├── app.py                  # 🚀 Main entry point (UI & Logic)
 ├── config.py               # ⚙️ Global Configuration
 ├── data_utils.py           # 🧹 Data Processing & Transformations
 ├── model_utils.py          # 🤖 ML Training, Tuning & Logging
 ├── plot_utils.py           # 📊 Visualization Logic
-├── mlruns/                 # 🗂️ MLflow Artifact Store (Auto-generated)
 └── requirements.txt        # 📦 Project Dependencies
 
 
 
-File Name,Description
-app.py,"The controller of the application. It builds the Gradio UI (Tabs, Buttons, Plots) and connects the user inputs to the backend logic imported from the utility files. Run this file to start the server."
-config.py,"Contains the global Config class. It manages settings like random states (42), CPU jobs (-1), Cross-Validation folds (5), and directory paths to ensure consistency across all modules."
-data_utils.py,"Handles the ""ETL"" (Extract, Transform, Load) process. It includes functions for loading CSVs, performing Train/Val/Test splits, and the main preprocess_data pipeline. It also contains the custom OutlierHandler class."
-model_utils.py,"The machine learning engine. It defines the Model Portfolios (dictionaries of algorithms), Hyperparameter Grids, and contains the core functions for Training (train_models_pipeline) and Tuning (tune_models_pipeline), including MLflow logging logic."
-plot_utils.py,"Dedicated to generating visualizations. It contains functions like plot_task_analysis (Boxplots/Countplots), plot_correlation, and plot_all_distributions that return Matplotlib figures to the UI."
-mlruns/,"A directory automatically created by MLflow to store experiment logs, metrics, and saved models (.pkl files)."
 
 ## 🛠️ Installation
 
