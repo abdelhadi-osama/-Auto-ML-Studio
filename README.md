@@ -47,7 +47,7 @@ The system automatically configures itself based on your problem type:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/automl-studio.git](https://github.com/yourusername/automl-studio.git)
+git clone [https://github.com/yourusername/automl-studio.git](https://github.com/abdelhadi-osama/automl-studio.git)
 cd automl-studio
 
 # Create a virtual environment (Recommended: Python 3.12)
